@@ -2,6 +2,9 @@ package bit;
 
 // 342
 public class powerOfFour {
+	// Suitable for same kind of question "Determine if power of N"
+	// num % N != 0 then num = num / N
+	
 	public boolean isPowerOfFour(int num) {
 		if (num == 0)
 			return false;
