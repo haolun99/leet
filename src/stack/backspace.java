@@ -22,7 +22,7 @@ public class backspace {
 				}else if(!stack.empty()){ 
 											// Check empty in case "a##c"
 										// ? c == '#' && !stack.empty()
-					                      // If else if contain another condition?
+					                      // What happened if "else if" contain another condition?
 					stack.pop();
 				}
 			}
