@@ -21,8 +21,8 @@ public class backspace {
 					stack.push(c);
 				}else if(!stack.empty()){ 
 											// Check empty in case "a##c"
-										// ? c == '#' && !stack.empty()
-					                      // What happened if "else if" contain another condition?
+					                    // What happened if "else if" contain another condition:
+										//  c == '#' && !stack.empty()
 					stack.pop();
 				}
 			}
