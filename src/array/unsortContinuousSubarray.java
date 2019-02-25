@@ -1,8 +1,14 @@
 package array;
 
 import java.util.Arrays;
-
+// 581
 public class unsortContinuousSubarray {
+	public static void main(String[] args) {
+		// int[] arr = {2, 6, 4, 8, 10, 9, 15};
+		int[] arr = {1, 2, 3, 4};
+		System.out.println(new unsortContinuousSubarray().findUnsortedSubarray(arr));
+	}
+	
 	public int findUnsortedSubarray(int[] nums) {
 		/*
 		 * (1) Sort the array and compare it to original array. (2) Use two for-loop to
@@ -20,24 +26,31 @@ public class unsortContinuousSubarray {
 		}
 
 		Arrays.parallelSort(nums);
+		System.out.println(Arrays.toString(nums));
+		System.out.println(Arrays.toString(origin));
+		
 
 		for (int i = 0; i < origin.length; i++) { // what this for-loop did
 			for (int j = 0; j < nums.length; j++) {
-				if (origin[i] != nums[j]) {
-					pos1 = origin[i];
+				if (nums[j] != origin[i]) {
+					pos1 = i;
 				}
 			}
 		}
 
-		for (int j = nums.length - 1; j > 0; j--) {
-			for (int i = origin.length - 1; i > 0; i--) {
+		for (int i = nums.length - 1; i > 0; i--) {
+			for (int j = origin.length - 1; j > 0; j--) {
 				if (nums[i] != origin[j]) {
-					pos2 = nums[i];
+					pos2 = j;
 				}
 			}
 		}
-
-		length = pos2 - pos1;
+		
+		// Question: 
+		// For case [1,2,3,4] pos1 and pos2 should be 0 but 3 and 2 instead
+		System.out.println(pos1);
+		System.out.println(pos2);
+		length = pos1 - pos2;
 
 		return length;
 	}
