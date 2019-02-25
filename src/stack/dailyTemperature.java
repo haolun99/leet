@@ -7,12 +7,13 @@ import java.util.Stack;
 public class dailyTemperature {
 	public static void main(String[] args) {
 		int[] array = { 73, 74, 75, 71, 69, 72, 76, 73 };
-		System.out.println(new dailyTemperature().dailyTemperatures(array));
-		// 直接打印只会打印数组的首位置
-		// 问题1: 除了通过debug查看数组，如何在控制台直接打印数组来测试下面的method？
-		// To do : How to test the method below
+		// 除了通过debug查看数组，如何在控制台直接打印数组来测试下面的method
+		// To test the method below
+		System.out.println(Arrays.toString(new dailyTemperature().dailyTemperatures(array)));
+		// 直接打印只会打印数组的首位置, use toString()
 	}
 
+	// Answer 1 not correct since use binarySearch, the result array is wrong
 	public int[] dailyTemperatures(int[] T) {
 		Stack<Integer> stack = new Stack();
 		int[] arr = new int[T.length];  // 处理后数组
@@ -46,5 +47,22 @@ public class dailyTemperature {
 		}
 
 		return result;
+		
+		
+		
+		// Answer 2 based on solution
+		/*
+		for(int i = T.length - 1; i >= 0; i--) {
+        	while(!stack.isEmpty() && T[stack.peek()] <= T[i])
+        		stack.pop();
+        	
+        	if(stack.isEmpty())
+        		arr[i] = 0;
+        	else
+        		arr[i] = stack.peek() - i ;
+        	
+            stack.push(i); 
+        }
+        */
 	}
 }
