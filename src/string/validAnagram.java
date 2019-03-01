@@ -3,6 +3,8 @@ package string;
 import java.util.Arrays;
 
 public class validAnagram {
+	// TODO: Create array with alphabet
+	
 	public boolean isAnagram(String s, String t) {
 		if (s.length() != t.length()) {
 			return false;
