@@ -5,6 +5,16 @@ import java.util.Arrays;
 public class validAnagram {
 	// TODO: Create array with alphabet
 	
+	// Solution 1
+	public boolean isAnagramOne(String s, String t) {
+        int[] alphabet = new int[26];
+       // Question 1: charAt() return a char, what is "char - char"
+        for (int i = 0; i < s.length(); i++) alphabet[s.charAt(i) - 'a']++;
+        for (int i = 0; i < t.length(); i++) alphabet[t.charAt(i) - 'a']--;
+        for (int i : alphabet) if (i != 0) return false;
+        return true;
+    }
+	
 	public boolean isAnagram(String s, String t) {
 		if (s.length() != t.length()) {
 			return false;

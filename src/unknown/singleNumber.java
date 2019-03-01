@@ -7,21 +7,8 @@ import java.util.Iterator;
 public class singleNumber {
 	public static void main(String[] args) {
 		int[] arr = {4,1,2,1,2};
-		//System.out.println(new singleNumber().singleNumber(arr));
-		System.out.println(new singleNumber().hasDoubleNumber(arr));
+		System.out.println(new singleNumber().singleNumber(arr));
 	}
-	
-	public static boolean hasDoubleNumber(int[] arr)
-	  {
-	    for (int i = 0; i < arr.length - 1; i += 1)
-	    {
-	      if (arr[i] == arr[i + 1])
-	      {
-	        return true;
-	      }
-	    }
-	    return false;
-	  }
 	
 	// Question 1: How to find the single element in a sorted array
 		// 11224
