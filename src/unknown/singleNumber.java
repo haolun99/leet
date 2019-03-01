@@ -7,11 +7,48 @@ import java.util.Iterator;
 public class singleNumber {
 	public static void main(String[] args) {
 		int[] arr = {4,1,2,1,2};
-		System.out.println(new singleNumber().singleNumber(arr));
+		//System.out.println(new singleNumber().singleNumber(arr));
+		System.out.println(new singleNumber().hasDoubleNumber(arr));
 	}
 	
-	// Solution 1: bit manipulation
+	public static boolean hasDoubleNumber(int[] arr)
+	  {
+	    for (int i = 0; i < arr.length - 1; i += 1)
+	    {
+	      if (arr[i] == arr[i + 1])
+	      {
+	        return true;
+	      }
+	    }
+	    return false;
+	  }
 	
+	// Question 1: How to find the single element in a sorted array
+		// 11224
+		public int singleNumber(int[] nums) {
+			int result = 0;
+			Arrays.parallelSort(nums);
+			for(int i = 0; i < nums.length; i++) {
+				if(nums[i] != nums[i+1] && nums[i] != nums[i + 2]) {
+					result = nums[i+2];
+				}
+			}
+			
+			return result;
+		}
+		
+		// Question 2: Use the binarySearch to find the single element in a sorted array
+	
+	
+	// Solution 1: bit manipulation
+	public int singleNumberOne(int[] nums) {
+		int result = 0;
+	    for (int i = 0; i<nums.length; i++)
+	    {
+			result ^= nums[i];
+	    }
+		return result;
+	}
 	
 	// Solution 2: 2*(sum_of_array_without_duplicates) – (sum_of_array)
 	// singleNumber = 2*(sum_of_array_without_duplicates) – (sum_of_array)
@@ -42,19 +79,5 @@ public class singleNumber {
 		return result;
 	}
 	
-	// Question 1: How to find the single element in a sorted array
-	// 11224
-	public int singleNumber(int[] nums) {
-		int result = 0;
-		Arrays.parallelSort(nums);
-		for(int i = 0; i < nums.length; i++) {
-			if(nums[i] != nums[i+1] && nums[i] != nums[i + 2]) {
-				result = nums[i+2];
-			}
-		}
-		
-		return result;
-	}
 	
-	// Question 2: Use the binarySearch to find the single element in a sorted array
 }
