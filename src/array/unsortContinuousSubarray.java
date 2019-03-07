@@ -9,6 +9,31 @@ public class unsortContinuousSubarray {
 		System.out.println(new unsortContinuousSubarray().findUnsortedSubarray(arr));
 	}
 	
+	// Solution one
+	public int findUnsortedSubarrayOne(int[] nums) {
+		int[] arr =new int[nums.length];
+		
+		for(int i = 0; i < nums.length; i++) {
+			arr[i] = nums[i];
+		}
+		
+		Arrays.parallelSort(arr);
+		
+		int start = 0;
+		int end = nums.length - 1;
+		
+		while(start < nums.length && arr[start] == nums[start]) {
+			start++;
+		}
+		
+		while(end > start && arr[end] == nums[end]) {
+			end--;
+		}
+		
+		return end - start + 1;
+	}
+	
+	// My answer, fail for case [1,2,3,4]
 	public int findUnsortedSubarray(int[] nums) {
 		/*
 		 * (1) Sort the array and compare it to original array. (2) Use two for-loop to

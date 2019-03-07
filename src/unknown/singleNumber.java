@@ -4,24 +4,24 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 
+import array.twoSumTwo;
+
 public class singleNumber {
 	public static void main(String[] args) {
 		int[] arr = {4,1,2,1,2};
+		//System.out.println(Arrays.toString(new singleNumber().singleNumber(arr));
 		System.out.println(new singleNumber().singleNumber(arr));
 	}
 	
 	// Question 1: How to find the single element in a sorted array
+	// binarySearch // 540
 		// 11224
 		public int singleNumber(int[] nums) {
 			int result = 0;
+			int[] res = new int[1];
 			Arrays.parallelSort(nums);
-			for(int i = 0; i < nums.length; i++) {
-				if(nums[i] != nums[i+1] && nums[i] != nums[i + 2]) {
-					result = nums[i+2];
-				}
-			}
 			
-			return result;
+			return 0;
 		}
 		
 		// Question 2: Use the binarySearch to find the single element in a sorted array
