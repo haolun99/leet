@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 // 540
 public class singleElementSorted {
-		
+	
+	// Solution using binary search
+	
 	// Correct but slow
 	public int singleNonDuplicate(int[] nums) {
             Arrays.parallelSort(nums);
