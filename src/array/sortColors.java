@@ -16,6 +16,18 @@ public class sortColors {
 				two++;
 			}
 		}
+		
+		//for(int j = 0; j < nums.length; j++);{ // Notice ; 
+//			for(int j = 0; j < nums.length; j++){
+//			if(nums[j] == 0) {
+//				zero++;
+//			}else if(nums[j] == 1) {
+//				one++;
+//			}
+//			else {
+//				two++;
+//			}
+//		}
 
 		for (int i = 0; i < zero; i++) {
 			nums[i] = 0;
