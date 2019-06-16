@@ -1,5 +1,5 @@
 package matrix;
-// 240
+// 240 && 74
 public class searchTwo {
 
 	/*
