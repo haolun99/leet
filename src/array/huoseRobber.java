@@ -4,7 +4,7 @@ public class huoseRobber {
 	// Dynamic programming method:
 	// TODO
 
-	// Reduce to maximum sum of an array with no 2 contagious element
+	// Reduce to maximum sum of an array with no 2 continuous element
 	public int robs(int[] nums) {
 		int n = nums.length;
 
