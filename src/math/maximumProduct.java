@@ -24,7 +24,7 @@ public class maximumProduct {
         		 max3 = nums[i];
         	 }
          }
-		
+         
 			return Math.max(min1 * min2 * max1, max1 * max2* max3);
     }
 }
