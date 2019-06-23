@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class intersectionOfTwoArray {
-		public int[] intersect(int[] nums1, int[] nums2) {
+	
+	public int[] intersect(int[] nums1, int[] nums2) {
             Arrays.sort(nums1);
             Arrays.sort(nums2);
             
