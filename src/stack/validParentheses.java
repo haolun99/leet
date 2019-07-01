@@ -11,6 +11,7 @@ import java.util.Stack;
 
 public class validParentheses {
 	
+	// Trick answer
 	public boolean isValid(String s) {
         Stack<Character> stack = new Stack();
         
