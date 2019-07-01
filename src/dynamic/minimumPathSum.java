@@ -21,6 +21,7 @@ public class minimumPathSum {
 		}
 
 		return grid[m - 1][n - 1];
+		
 	}
 	
 }
