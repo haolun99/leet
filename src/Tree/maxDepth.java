@@ -11,11 +11,15 @@ public class maxDepth {
 		}
 	}
 
-		public int diameterOfBinaryTree(TreeNode root) {
-        
-			
-			return 0;
+	public int diameterOfBinaryTree(TreeNode root) {
+        return rec_func(root,0);
     }
+    
+	public int rec_func(TreeNode node, int depth){
+        if (node == null)
+            return depth;
+        else
+            return Math.max(rec_func(node.left,depth + 1),rec_func(node.right,depth + 1));}
 
 	
 }
