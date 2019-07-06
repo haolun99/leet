@@ -7,4 +7,7 @@ public class minCostClimb {
 		}
 		return Math.min(cost[cost.length - 1], cost[cost.length - 2]);
 	}
+	
+	// Not to modify the original array
+	// discuss with interviewer whether the input is read only or not
 }
