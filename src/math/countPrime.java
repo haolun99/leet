@@ -1,6 +1,15 @@
 package math;
 // 204
 public class countPrime {
+	public static void main(String[] args) {
+	int a = 1000;
+	int b = 1000;
+	int c = 100;
+	int d = 100;
+	System.out.println(a == b);
+	System.out.println(c == d);
+	}
+	
 	public int countPrimes(int n) {
 		int count = 0;
 		boolean[] notPrime = new boolean[n];
