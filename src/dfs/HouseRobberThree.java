@@ -25,7 +25,7 @@ public class HouseRobberThree {
 		if (root == null)
 			return 0;
 		if (map.containsKey(root))
-			return map.get(root);
+			return map.get(root); // If contain the value, get this one
 
 		if (root.left != null) {
 			val += helper(root.left.left, map) + helper(root.left.right, map);
