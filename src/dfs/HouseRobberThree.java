@@ -16,7 +16,6 @@ public class HouseRobberThree {
 
 	// Solution 1
 	public int robSol(TreeNode root) {
-
 		return helper(root, new HashMap<>());
 	}
 
