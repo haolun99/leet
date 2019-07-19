@@ -1,4 +1,4 @@
-package hashTable;
+package linkedList;
 // 141
 import java.util.HashSet;
 
