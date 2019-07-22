@@ -8,8 +8,9 @@ import java.util.Map;
 public class letterCombination {
 	public static void main(String[] args) {
 		String str = "string";
+		String str2 = "hello";
 		System.out.println(str.substring(0, 1));
-		System.out.println(str);
+		System.out.println(str + str2);
 	}
 
 	Map<String, String> map = new HashMap<String, String>() {
@@ -46,6 +47,7 @@ public class letterCombination {
 			String letters = map.get(digit);
 			for (int i = 0; i < letters.length(); i++) {
 				String letter = map.get(digit).substring(i, i + 1);
+				// add string "abc" + "def" = "abcdef" 
 				backtrack(combination + letter, nextDigits.substring(1)); // Move out first digit, iterate remaining
 			// backtrack(combination + nextDigits, nextDigits.substring(1)); Wrong
 			}
