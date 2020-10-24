@@ -2,5 +2,7 @@ package array;
 
 public class NonDecreasingArray {
     // new add
-	// 1024 check
+	public static void main(String[] args) {
+		System.out.println("This is a GitHub test");
+	}
 }
