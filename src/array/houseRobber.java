@@ -1,6 +1,6 @@
 package array;
 
-public class huoseRobber {
+public class houseRobber {
 	// Dynamic programming method:
 	// TODO
 
