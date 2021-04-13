@@ -20,6 +20,7 @@ public class SumOfUnique {
             Integer occurrence = map.get(num);
 
             map.put(num, occurrence == null ? 1 : occurrence + 1);
+            // map.put(nums[i],map.getOrDefault(nums[i],0)+1);
         }
 
         for(Map.Entry<Integer, Integer> e : map.entrySet()){
