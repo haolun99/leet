@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class numberOfGoodPairs {
     // 1512
     public int numIdenticalPairs(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>(); // [1,2,3,1,1,3]
         int result = 0;
 
         for(int n : nums){
