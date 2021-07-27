@@ -22,27 +22,21 @@ public class twoSumTwo {
         }
         return null;
     }
-	
-	
-	// My answer
-	public int[] twoSum(int[] numbers, int target) {
+
+    // My answer
+    public int[] twoSum(int[] nums, int target){
 		int[] temp = new int[2];
-	    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-	    for (int i = 0; i < numbers.length; i++) {
-	        if (map.containsKey(target - numbers[i])) {   // How put array elements into hashMap
-	            temp[1] = i;    
-	            temp[0] = map.get(target - numbers[i]);
-	            // return temp; 
-	            // Notice this will terminate program directly without run following 
-	        }
-	        map.put(numbers[i], i);
-	    }
-	    
-	    int[] result = new int[2];
-	    for(int i = 0; i < temp.length; i++){
-             result[i] = temp[i] + 1;
-        }
-        
-        return result;
-    }
+		Map<Integer, Integer> map = new HashMap<>();
+		for(int i = 0; i < nums.length; i++){
+			if(map.containsKey(target - nums[i])){
+				temp[1] = i;
+				temp[0] = map.get(target - nums[i]);
+			}
+			map.put(nums[i], i);
+		}
+
+		return temp;
+	}
+	
+
 }
