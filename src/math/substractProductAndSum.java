@@ -1,7 +1,7 @@
 package math;
 
 public class substractProductAndSum {
-
+    // 1281
     public int substractProductAndSum(int n){
         int sum = 0;
         int product = 1;
