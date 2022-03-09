@@ -24,9 +24,13 @@ public class findWordCanBeFormed {
                 int[] tSeen = Arrays.copyOf(seen, seen.length);
                 int Tcount = 0;
                 for (char c : word.toCharArray()) {
+                    // If find a character in words not existed in target string, no need to scan rest of this word
+                    if(tSeen[c - 'a'] < 0)
+                            break;
+
                     if (tSeen[c - 'a'] > 0) {
                         tSeen[c - 'a']--;
-                        Tcount++;
+                        Tcount++; // number of common character plus one
                     }
                 }
                 if (Tcount == word.length())
