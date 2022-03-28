@@ -1,7 +1,7 @@
 package math;
 
 public class PalindromeNumber {
-		//
+		// 9
 	public static void main(String[] args){
 		int num = 121;
 		System.out.println(isPalindrome(num));
