@@ -2,6 +2,7 @@ package string;
 
 public class ConsecutiveCharacter {
     // 1446
+
     public static void main(String[] args){
         String str = "tourist";
         System.out.println(maxPower(str));
