@@ -6,8 +6,12 @@ import java.util.LinkedList;
 public class mergeInterval {
 
     // 56
+    public static void main(String[] args){
+        int[][] array = {{1,3},{2,6},{8,10},{15,18}};
+        System.out.println(merge(array));
+    }
 
-    public int[][] merge(int[][] intervals) {
+    public static int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
 
         // (X1,Y1), (X2, Y2), (X3, Y3)
