@@ -7,9 +7,8 @@ import java.util.Set;
 
 public class findAllDuplicates {
     // Solution
-	// when find a number i, flip the number at position i-1 to negative. 
-    // if the number at position i-1 is already negative, i is the number that occurs twice.
-	// Update
+	// When find a number i, flip the number at position i-1 to negative.
+    // If the number at position i-1 is already negative, i is the number that occurs twice.
     
     public List<Integer> findDuplicatesSol(int[] nums) {
         List<Integer> res = new ArrayList<>();
