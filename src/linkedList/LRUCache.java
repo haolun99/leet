@@ -5,6 +5,7 @@ import java.util.Map;
 // 146
 class LRUCache {
     public static void main(String[] args) {
+        // This main method contain a test case for the answer
         // Create an LRUCache with a capacity of 2
         LRUCache cache = new LRUCache(2);
 
